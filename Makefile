@@ -4,7 +4,7 @@ obj-m += hello.o
 KVERSION := $(shell uname -r)
 
 all:
-	$(MAKE) -C /lib/modules/$(KVERSION)/build M=$(PWD) modules
+	$(MAKE) -C /src M=/tmp/build/src modules
 
 clean:
-	$(MAKE) -C /lib/modules/$(KVERSION)/build M=$(PWD) clean
+	$(MAKE) -C /src M=/tmp/build/src clean
